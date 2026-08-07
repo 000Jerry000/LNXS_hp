@@ -1,0 +1,179 @@
+.footer {
+  &-container {
+    background: #3B353C;
+    padding: 64px 160px;
+    @include pc {
+      padding: 64rem 160rem;
+    }
+    @include sp {
+      padding: 64rem 16rem;
+    }
+  }
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 64px;
+    @include pc {
+      margin-bottom: 64rem;
+    }
+    @include sp {
+      display: block;
+    }
+    &__elem {
+      h2 {
+        color: var(--g-color-bg);
+        font-size: 19px;
+        line-height: 1.5;
+        font-weight: 500;
+        margin-bottom: 64px;
+        @include pc {
+          font-size: 19rem;
+          margin-bottom: 64rem;
+        }
+      }
+      &-detail {
+        ul {
+          li {
+            display: flex;
+            align-items: start;
+            justify-content: left;
+            svg {
+              margin-top: 3px;
+              margin-right: 8px;
+              width: 20px;
+              height: 20px;
+              @include pc {
+                margin-top: 3rem;
+                margin-right: 8rem;
+                width: 20rem;
+                height: 20rem;
+              }
+            }
+            p {
+              color: var(--g-color-bg);
+              font-size: 19px;
+              line-height: 1.5;
+              @include pc {
+                font-size: 19rem;
+              }
+            }
+            &:first-child {
+              svg {
+                width: 24px;
+                height: 24px;
+                @include pc {
+                  width: 24rem;
+                  height: 24rem;
+                }
+              }
+            }
+            &:not(:last-child) {
+              margin-bottom: 16px;
+              @include pc {
+                margin-bottom: 16rem;
+              } 
+            }
+          }
+        }
+      }
+      &-link {
+        ul {
+          li {
+            a {
+              color: var(--g-color-bg);
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 1;
+              @include pc {
+                font-size: 16rem;
+              }
+            }
+          }
+        }
+        & > ul {
+          & > li {
+            &:not(:last-child) {
+              margin-bottom: 24px;
+              @include pc {
+                margin-bottom: 24rem;
+              }
+            }
+            ul {
+              padding-top: 8px;
+              padding-left: 8px;
+              @include pc {
+                padding-top: 8rem;
+                padding-left: 8rem;
+              }
+              li {
+                &:not(:last-child) {
+                  margin-bottom: 16px;
+                  @include pc {
+                    margin-bottom: 16rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &-btn {
+        @include sp {
+          text-align: center;
+        }
+        &:first-child {
+          margin-bottom: 24px;
+          @include pc {
+            margin-bottom: 24rem;
+          }
+          a {
+            &:hover {
+              color: var(--g-color-black);
+              svg {
+                path {
+                  fill: var(--g-color-black);
+                }
+              }
+            }
+          }
+        }
+        &:last-child {
+          a {
+            color: var(--g-color-black);
+            &:hover {
+              color: var(--g-color-bg);
+            }
+          }
+        }
+        a {
+          border: unset;
+          width: 288px;
+          height: 55px;
+          padding: unset;
+          @include pc {
+            width: 288rem;
+            height: 55rem;
+          }
+          @include sp {
+            margin: auto;
+          }
+        }
+      }
+      &:not(:last-child) {
+        @include sp {
+          margin-bottom: 64rem;
+        }
+      }
+    }
+  }
+  &-bottom {
+    p {
+      text-align: center;
+      color: var(--g-color-bg);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}
