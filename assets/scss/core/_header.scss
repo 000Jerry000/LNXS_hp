@@ -36,218 +36,92 @@
   }
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 800;
-  // transform: translateY(-120%);
-  transition: transform 1.6s cubic-bezier(0.075, 0.82, 0.165, 1);
-  &.loaded {
-    transform: translateY(0);
-  }
-  &-container {
+header.header {
+  background-color: var(--g-color-black);
+  border-bottom: 1px solid #3b3b3b;
+
+  .nav {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 65px 150px 65px 80px;
-    margin: auto;
-    @include pc {
-      padding: 65rem 150rem 65rem 80rem;
+
+    .btn {
+      padding: 10rem 20rem;
     }
-    @include sp {
-      padding: 45rem 35rem;
-      padding-right: 64rem;
-      max-width: 100%;
-    }
-  }
-  &-logo {
-    h1 {
-      img {
-        max-width: 290px;
-        @include pc {
-          max-width: 290rem;
-        }
-        @include sp {
-          max-width: 175rem;
-        }
-      }
-    }
-  }
-  &-link {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    @include sp {
-      display: none;
-    }
-    ul {
+
+    .logo {
       display: flex;
       align-items: center;
-      justify-content: left;
-      margin-right: 40px;
-      @include pc {
-        margin-right: 40rem;
-      }
-      li {
-        margin-right: 28px;
-        @include pc {
-          margin-right: 28rem;
-        }
-        a {
-          font-family: $font-barlow;
-          font-weight: 500;
-          font-size: 20px;
-          color: var(--g-color-white);
-          line-height: 1;
-          letter-spacing: 0.05em;
-          position: relative;
-          @include pc {
-            font-size: 20rem;
-          }
-          &::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            transition: all 0.4s ease-in-out;
-            background: var(--g-color-white);
-            height: 1px;
-            right: 0;
-            bottom: 0;
-          }
-          &:hover {
-            &::after {
-              width: 100%;
-              right: auto;
-              left: 0;
-            }
-          }
-        }
+      gap: 12rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      font-size: 20rem;
+      padding-left: 10rem;
+
+      .mark {
+        width: 34rem;
+        height: 34rem;
+        border-radius: 9rem;
+        background: linear-gradient(135deg, var(--gold), var(--purple));
+        display: grid;
+        place-items: center;
+        font-size: 15rem;
+        color: #0a0a0f;
+        font-weight: 900;
       }
     }
-  }
-  &-contact {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    &-btn {
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      font-size: 14rem;
+      color: var(--muted);
+
       a {
-        display: flex;
+        height: 60rem;
+        padding-inline: 20rem;
+        display: flex;  
         align-items: center;
         justify-content: center;
+        font-size: 16rem;
+        color: #fff;
         position: relative;
-        background: var(--g-color-white);
-        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.15);
-        padding: 20px 50px;
-        border-radius: 15px;
-        font-family: $font-kaku;
-        @include pc {
-          padding: 20rem 50rem;
-          border-radius: 15rem;
-        }
-        span {
-          color: var(--g-color-blue);
-          font-weight: bold;
-          font-size: 20px;
-          letter-spacing: 0.05em;
-          line-height: 1;
-          @include pc {
-            font-size: 20rem;
-          }
-        }
-        svg {
+        &::after {
+          content: "";
           position: absolute;
+          bottom: 0;
           right: 0;
-          top: 50%;
-          transform: translate(55%, -50%);
-          width: 51px;
-          height: auto;
-          @include pc {
-            width: 51rem;
-          }
+          width: 0%;
+          height: 3px;
+          background-color: var(--gold);
+          transition: all ease-in-out .3s;
+        }
+        &:hover::after{
+          width: 100%;
+          left: 0;
+        }
+      }
+      .btn-primary {
+        border-radius: 0;
+        background-color: var(--gold);
+        transition: all ease .3s;
+        &::after{
+          opacity: 0;
+        }
+        &:hover {
+          background-color: var(--gold-2);
         }
       }
     }
-    &-deco {
-      &-main {
-        position: fixed;
-        z-index: 998;
-        right: 24px;
-        top: 28px;
-        animation: dogAnime 8s linear infinite;        
-        @include pc {
-          top: 28rem;
-          right: 24rem;
-        }
-        @include sp {
-          top: 23rem;
-          right: 14rem;
-        }
-        img {
-          width: 105px;
-          @include pc {
-            width: 105rem;
-          }
-          @include sp {
-            width: 60rem;
-          }
-        }
-        @keyframes dogAnime {
-          0% {
-            transform: translateX(0);
-          }
-          40% {
-            transform: translateX(0);
-          }
-          48% {
-            transform: translateX(50%);
-          }
-          52% {
-            transform: translateX(50%);
-          }
-          60% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-      }
-      &-hands {
-        position: fixed;
-        z-index: 1000;
-        right: 10px;
-        top: 54px;
-        @include pc {
-          top: 54rem;
-          right: 10rem;
-        }
-        @include sp {
-          top: 33rem;
-          right: 8rem;
-        }
-        img {
-          width: 27px;
-          @include pc {
-            width: 27rem;
-          }
-          @include sp {
-            width: 17rem;
-          }
-        }
-      }
-    }
-  }
-  &-sp-menu {
-    display: none;
-    @include sp {
-      display: block;
-    }
-    img {
-      @include sp {
-        width: 63rem;
-      }
+
+    .burger {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--txt);
+      font-size: 26rem;
+      cursor: pointer
     }
   }
 }
