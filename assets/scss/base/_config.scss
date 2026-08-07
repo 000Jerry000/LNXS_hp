@@ -39,7 +39,7 @@ $breakpoint: (
   --g-color-bg: #F4F5F7;
   --g-color-red: #EF626B;
   --g-color-orange: #E27A1E;
-  --g-color-black: #3B353C;
+  --g-color-black: #131514;
   --g-color-blue: #00A0E9;
   --g-color-white: #fff;
   --g-color-border: #707070;
@@ -53,6 +53,22 @@ $breakpoint: (
     --g-padding-m: 0;
     --g-padding-l: 0;
   }
+}
+
+:root {
+  --bg: #0a0a0f;
+  --bg-2: #12121b;
+  --card: #16161f;
+  --card-2: #1c1c28;
+  --line: rgba(255, 255, 255, .08);
+  --txt: #f4f4f7;
+  --muted: #9a9ab0;
+  --gold: #856D51;
+  --gold-2: #504231;
+  --purple: #7c5cff;
+  --purple-2: #b28bff;
+  --radius: 18px;
+  --shadow: 0 20px 60px rgba(0, 0, 0, .45);
 }
 
 //font family
