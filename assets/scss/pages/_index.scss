@@ -29,7 +29,7 @@
     border-radius: 999rem;
     font-size: 13rem;
     color: var(--gold-text);
-    border: 1rem solid rgba(212, 175, 106, .35);
+    border: 1px solid rgba(212, 175, 106, .35);
     background: rgba(212, 175, 106, .06);
     margin-bottom: 26rem;
   }
@@ -83,7 +83,7 @@
 
   .stat {
     background: linear-gradient(180deg, var(--card), var(--bg-2));
-    border: 1rem solid var(--line);
+    border: 1px solid var(--line);
     padding: 26rem 24rem;
     border: 1px solid #d4b56a;
     border-radius: 4px;
@@ -115,6 +115,16 @@
 }
 
 /* ---------- Section base ---------- */
+section {
+  &:nth-last-of-type(odd) {
+    background-color: var(--bg);
+  }
+
+  &:nth-last-of-type(even) {
+    background-color: var(--bg-2);
+  }
+}
+
 section.block {
   padding: 150rem 0;
   position: relative;
@@ -198,7 +208,7 @@ section.block {
     border-radius: 4rem;
     font-size: 14rem;
     font-weight: 700;
-    border: 1rem solid var(--line);
+    border: 1px solid var(--line);
     background: var(--card);
     color: var(--txt);
     transition: border-color .2s, transform .2s;
@@ -243,7 +253,7 @@ section.block {
       place-items: center;
       font-size: 24rem;
       background: linear-gradient(135deg, rgba(212, 175, 106, .18), rgba(124, 92, 255, .18));
-      border: 1rem solid var(--line);
+      border: 1px solid var(--line);
       margin-bottom: 20rem;
     }
 
@@ -278,7 +288,7 @@ section.block {
     position: relative;
     overflow: hidden;
     background: linear-gradient(180deg, var(--card-2), var(--card));
-    border: 1rem solid var(--line);
+    border: 1px solid var(--line);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -337,7 +347,7 @@ section.block {
     h3 {
       font-size: 20rem;
       font-weight: 500;
-      padding-block: 50rem;
+      padding-block: 100rem;
     }
 
     ul {
@@ -366,6 +376,12 @@ section.block {
 }
 
 /* ---------- Features ---------- */
+.sec-features {
+  background: var(--bg-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
 .feat-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -382,6 +398,7 @@ section.block {
     display: flex;
     align-items: center;
     justify-content: center;
+
     img {
       width: 60%;
       height: auto;
@@ -412,3 +429,43 @@ section.block {
   }
 
 }
+
+/* ---------- Testimonial ---------- */
+.quote-wrap {
+  margin-top: 12rem
+}
+
+.quote {
+  max-width: 860rem;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--bg-2);
+  border: 2px solid var(--line);
+  padding: 56rem 40rem;
+  position: relative;
+}
+
+.quote .mark {
+  font-size: 64rem;
+  color: var(--gold);
+  line-height: .6;
+  opacity: .5
+}
+
+.quote p {
+  font-size: clamp(17rem, 2.2vw, 22rem);
+  font-weight: 600;
+  margin: 18rem 0 26rem;
+  line-height: 1.7
+}
+
+.quote .who {
+  color: var(--muted);
+  font-size: 14rem
+}
+
+.quote .who b {
+  color: var(--txt);
+  font-weight: 700
+}
+
