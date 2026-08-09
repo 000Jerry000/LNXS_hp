@@ -1,47 +1,4 @@
 // ============================================================
-// Industries
-// ============================================================
-
-.inds {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 12px;
-
-  justify-content: center;
-
-  margin-top: 40px;
-}
-
-.ind {
-  padding: 10px 22px;
-
-  border-radius: 999px;
-
-  font-size: 14px;
-
-  font-weight: 700;
-
-  border: 1px solid $line;
-
-  background: $card;
-
-  color: $txt;
-
-  transition:
-    border-color 0.2s,
-    transform 0.2s;
-
-  &:hover {
-    border-color: $gold;
-
-    transform: translateY(-3px);
-  }
-}
-
-
-// ============================================================
 // Highlights
 // ============================================================
 

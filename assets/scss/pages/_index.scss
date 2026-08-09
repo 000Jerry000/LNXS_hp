@@ -116,13 +116,13 @@
 
 /* ---------- Section base ---------- */
 .sec-business {
-  padding: 200rem 0;
+  padding: 150rem 0;
   position: relative;
 }
 
 .eyebrow {
   display: inline-block;
-  font-size: 13rem;
+  font-size: 24rem;
   letter-spacing: .24em;
   color: var(--gold);
   text-transform: uppercase;
@@ -131,30 +131,27 @@
 }
 
 .sec-title {
-  font-size: clamp(26rem, 3.6vw, 40rem);
-  font-weight: 900;
+  font-size: 28rem;
+  font-weight: 700;
   line-height: 1.35;
-  margin-bottom: 16rem;
-
-  text-align: center;
-  font-weight: bold;
-  font-size: 2.8rem;
-  margin-bottom: 100rem;
   letter-spacing: 0.25em;
+  text-align: center;
+  margin-bottom: 30rem;
 }
 
 .sec-sub {
   color: var(--muted);
   max-width: 640rem;
-  font-size: 16rem
+  font-size: 16rem;
+  margin-bottom: 100rem;
 }
 
 .center {
-  text-align: center
-}
+  text-align: center;
 
-.center .sec-sub {
-  margin: 0 auto
+  .sec-sub {
+    margin-inline: auto;
+  }
 }
 
 /* ---------- Industries ---------- */
@@ -178,6 +175,91 @@
     &:hover {
       border-color: var(--gold);
       transform: translateY(-3rem);
+    }
+  }
+}
+
+/* ---------- Highlights ---------- */
+.highlights {
+  padding: 150rem;
+  background: var(--bg-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line)
+}
+
+.hl-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20rem;
+  margin-top: 52rem;
+
+  .hl {
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition: transform .25s, border-color .25s;
+    padding-bottom: 20rem;
+
+    &:hover {
+      transform: translateY(-6rem);
+      border-color: rgba(212, 175, 106, .4);
+    }
+
+    .ic {
+      width: 100%;
+      height: auto;
+      display: grid;
+      place-items: center;
+      font-size: 24rem;
+      background: linear-gradient(135deg, rgba(212, 175, 106, .18), rgba(124, 92, 255, .18));
+      border: 1rem solid var(--line);
+      margin-bottom: 20rem;
+    }
+
+    h3 {
+      width: max-content;
+      padding-inline: 6rem;
+      margin-inline: auto;
+      font-size: 24rem;
+      font-family: 'Special Elite', cursive;
+      margin-bottom: 8rem;
+      border-bottom: 4px solid var(--gold);
+    }
+
+    p {
+      padding-inline: 10rem;
+      font-size: 14rem;
+      color: var(--muted);
+    }
+  }
+}
+
+.more_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100rem;
+  a {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none !important;
+    box-sizing: border-box;
+    position: relative;
+    transition: 0.3s;
+    font-size: 16rem;
+    font-weight: bold;
+    padding: 5rem 20rem;
+    margin: auto;
+    border-radius: 100rem;
+    color: #856D51;
+    border: 3px solid #856D51;
+    background: transparent;
+
+    &:hover {
+      color: #FFF;
+      border: 3px solid #856D51;
+      background: #856D51;
     }
   }
 }
