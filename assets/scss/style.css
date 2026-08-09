@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700;900&display=swap");
@@ -1942,7 +1943,7 @@ header.header .nav .burger {
 }
 
 /* ---------- Section base ---------- */
-.sec-business {
+section.block {
   padding: 150rem 0;
   position: relative;
 }
@@ -1978,6 +1979,35 @@ header.header .nav .burger {
 }
 .center .sec-sub {
   margin-inline: auto;
+}
+
+.more_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100rem;
+}
+.more_btn a {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none !important;
+  box-sizing: border-box;
+  position: relative;
+  transition: 0.3s;
+  font-size: 16rem;
+  font-weight: bold;
+  padding: 5rem 20rem;
+  margin: auto;
+  border-radius: 100rem;
+  color: #856D51;
+  border: 3px solid #856D51;
+  background: transparent;
+}
+.more_btn a:hover {
+  color: #FFF;
+  border: 3px solid #856D51;
+  background: #856D51;
 }
 
 /* ---------- Industries ---------- */
@@ -2054,31 +2084,87 @@ header.header .nav .burger {
   color: var(--muted);
 }
 
-.more_btn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 100rem;
+/* ---------- Roles ---------- */
+.roles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22rem;
+  margin-top: 52rem;
 }
-.more_btn a {
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none !important;
-  box-sizing: border-box;
+.roles .role {
   position: relative;
-  transition: 0.3s;
-  font-size: 16rem;
-  font-weight: bold;
-  padding: 5rem 20rem;
-  margin: auto;
-  border-radius: 100rem;
-  color: #856D51;
-  border: 3px solid #856D51;
-  background: transparent;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--card-2), var(--card));
+  border: 1rem solid var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.more_btn a:hover {
-  color: #FFF;
-  border: 3px solid #856D51;
-  background: #856D51;
+.roles .role::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.roles .role .tag {
+  font-size: 24rem;
+  letter-spacing: 0.16em;
+  color: #fff;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  padding: 50rem 0;
+}
+.roles .role:nth-of-type(1) .tag {
+  background-color: #8B8B8B;
+}
+.roles .role:nth-of-type(2) .tag {
+  background-color: var(--gold);
+}
+.roles .role:nth-of-type(2) .tag::before {
+  content: "";
+  top: 0;
+  right: 0;
+  border-bottom: 3em solid transparent;
+  border-right: 3em solid #FFC400;
+  position: absolute;
+  z-index: 100;
+}
+.roles .role:nth-of-type(2) .tag::after {
+  content: "一番人気!";
+  display: block;
+  top: 18px;
+  transform: rotate(45deg);
+  font-size: 10rem;
+  color: #000;
+  right: 0;
+  position: absolute;
+  z-index: 101;
+}
+.roles .role:nth-of-type(3) .tag {
+  background-color: #9F4F48;
+}
+.roles .role h3 {
+  font-size: 20rem;
+  font-weight: 500;
+  padding-block: 50rem;
+}
+.roles .role ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.roles .role ul li {
+  width: 100%;
+  text-align: center;
+  font-size: 14rem;
+  position: relative;
+  padding-block: 10rem;
+}
+.roles .role ul li:nth-of-type(even) {
+  background-color: #454545;
+}
+.roles .role ul li:nth-of-type(odd) {
+  background-color: #333;
 }/*# sourceMappingURL=style.css.map */
