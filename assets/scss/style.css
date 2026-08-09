@@ -1301,7 +1301,7 @@ header.header {
   top: 0;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.8274509804);
-  z-index: 100;
+  z-index: 999;
 }
 header.header .nav {
   width: 100%;
@@ -1917,13 +1917,13 @@ header.header .nav .burger {
   border: 1px solid var(--line);
   padding: 26rem 24rem;
   border: 1px solid #d4b56a;
-  border-radius: 4px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 0 4px #0e1530, inset 0 0 0 5px #d4b56a;
+  border-radius: 4rem;
+  box-shadow: 0 4rem 20rem rgba(0, 0, 0, 0.5), inset 0 0 0 4rem #0e1530, inset 0 0 0 5rem #d4b56a;
   transition: all ease 0.2s;
 }
 .sec-hero .stat:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(212, 181, 106, 0.25), inset 0 0 0 4px #0e1530, inset 0 0 0 5px #d4b56a;
+  transform: translateY(-2rem);
+  box-shadow: 0 8rem 28rem rgba(212, 181, 106, 0.25), inset 0 0 0 4rem #0e1530, inset 0 0 0 5rem #d4b56a;
 }
 .sec-hero .stat .num {
   font-size: 26rem;
@@ -2008,12 +2008,12 @@ section.block {
   margin: auto;
   border-radius: 100rem;
   color: #856D51;
-  border: 3px solid #856D51;
+  border: 3rem solid #856D51;
   background: transparent;
 }
 .more_btn a:hover {
   color: #FFF;
-  border: 3px solid #856D51;
+  border: 3rem solid #856D51;
   background: #856D51;
 }
 
@@ -2083,7 +2083,7 @@ section.block {
   font-size: 24rem;
   font-family: "Special Elite", cursive;
   margin-bottom: 8rem;
-  border-bottom: 4px solid var(--gold);
+  border-bottom: 4rem solid var(--gold);
 }
 .hl-grid .hl p {
   padding-inline: 10rem;
@@ -2107,12 +2107,6 @@ section.block {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.roles .role::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 .roles .role .tag {
   font-size: 24rem;
@@ -2141,7 +2135,7 @@ section.block {
 .roles .role:nth-of-type(2) .tag::after {
   content: "一番人気!";
   display: block;
-  top: 18px;
+  top: 18rem;
   transform: rotate(45deg);
   font-size: 10rem;
   color: #000;
@@ -2179,47 +2173,45 @@ section.block {
 
 /* ---------- Features ---------- */
 .sec-features {
-  background: var(--bg-2);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-
-.feat-grid {
+.sec-features .feat-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 52px;
+  gap: 20rem;
+  margin-top: 52rem;
 }
-.feat-grid .ic {
+.sec-features .feat-grid .ic {
   display: inline-block;
   background: #000;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  line-height: 120px;
+  width: 150rem;
+  height: 150rem;
+  line-height: 120rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.feat-grid .ic img {
+.sec-features .feat-grid .ic img {
   width: 60%;
   height: auto;
 }
-.feat-grid .feat {
+.sec-features .feat-grid .feat {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 28px 26px;
+  gap: 20rem;
+  padding: 28rem 26rem;
   transition: border-color 0.25s, transform 0.25s;
 }
-.feat-grid .feat h3 {
-  font-size: 24px;
+.sec-features .feat-grid .feat h3 {
+  font-size: 24rem;
   font-weight: 500;
-  margin-bottom: 6px;
+  margin-bottom: 6rem;
   text-align: center;
 }
-.feat-grid .feat p {
+.sec-features .feat-grid .feat p {
   text-align: center;
   font-size: 12rem;
   color: #fff;
@@ -2230,37 +2222,129 @@ section.block {
 .quote-wrap {
   margin-top: 12rem;
 }
-
-.quote {
+.quote-wrap .quote {
   max-width: 860rem;
   margin: 0 auto;
   text-align: center;
   background: var(--bg-2);
-  border: 2px solid var(--line);
+  border: 2rem solid var(--line);
   padding: 56rem 40rem;
   position: relative;
 }
-
-.quote .mark {
+.quote-wrap .quote .mark {
   font-size: 64rem;
   color: var(--gold);
   line-height: 0.6;
   opacity: 0.5;
 }
-
-.quote p {
+.quote-wrap .quote p {
   font-size: clamp(17rem, 2.2vw, 22rem);
   font-weight: 600;
   margin: 18rem 0 26rem;
   line-height: 1.7;
 }
-
-.quote .who {
+.quote-wrap .quote .who {
   color: var(--muted);
   font-size: 14rem;
 }
-
-.quote .who b {
+.quote-wrap .quote .who b {
   color: var(--txt);
   font-weight: 700;
+}
+
+/* ---------- Pricing ---------- */
+.sec-pricing {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.sec-pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22rem;
+  margin-top: 52rem;
+}
+.sec-pricing .plans .plan {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s;
+}
+.sec-pricing .plans .plan h3 {
+  font-size: 24rem;
+  letter-spacing: 0.16em;
+  color: #fff;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  padding: 50rem 0;
+  position: relative;
+}
+.sec-pricing .plans .plan:nth-of-type(1) h3 {
+  background-color: #8B8B8B;
+}
+.sec-pricing .plans .plan:nth-of-type(2) h3 {
+  background-color: var(--gold);
+}
+.sec-pricing .plans .plan:nth-of-type(2) h3::before {
+  content: "";
+  top: 0;
+  right: 0;
+  border-bottom: 3em solid transparent;
+  border-right: 3em solid #FFC400;
+  position: absolute;
+  z-index: 100;
+}
+.sec-pricing .plans .plan:nth-of-type(2) h3::after {
+  content: "人気No.1";
+  display: block;
+  top: 18rem;
+  transform: rotate(45deg);
+  font-size: 10rem;
+  color: #000;
+  right: 0;
+  position: absolute;
+  z-index: 101;
+}
+.sec-pricing .plans .plan:nth-of-type(3) h3 {
+  background-color: #9F4F48;
+}
+.sec-pricing .plans .plan .desc {
+  font-size: 18rem;
+  color: #fff;
+  padding-inline: 20rem;
+  padding-block: 80rem;
+}
+.sec-pricing .plans .plan ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10rem;
+}
+.sec-pricing .plans .plan ul li {
+  width: 100%;
+  font-size: 14rem;
+  color: #fff;
+  text-align: center;
+  padding-block: 10rem;
+}
+.sec-pricing .plans .plan ul li:nth-of-type(odd) {
+  background-color: #333;
+}
+.sec-pricing .plans .plan ul li:nth-of-type(even) {
+  background-color: #454545;
+}
+.sec-pricing .plans .plan .btn {
+  margin-top: auto;
+  justify-content: center;
+}
+.sec-pricing .note {
+  font-size: 13rem;
+  color: var(--muted);
+  margin-top: 26rem;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
