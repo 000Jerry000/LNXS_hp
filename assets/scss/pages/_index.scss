@@ -540,12 +540,14 @@ section.block {
         align-items: center;
         width: 100%;
         margin-bottom: 10rem;
+
         li {
           width: 100%;
           font-size: 14rem;
           color: #fff;
           text-align: center;
           padding-block: 10rem;
+
           &:nth-of-type(odd) {
             background-color: #333;
           }
@@ -569,5 +571,160 @@ section.block {
     color: var(--muted);
     margin-top: 26rem;
     text-align: center
+  }
+}
+
+/* ---------- FAQ ---------- */
+.faq-list {
+  margin: 52px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  .faq {
+    background: var(--card);
+    border: 1px solid var(--line);
+    overflow: hidden;
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 10px 26px;
+      font-weight: 700;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      background-color: #333;
+      color: var(--muted);
+
+      &::-webkit-details-marker {
+        display: none
+      }
+
+      .q {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+
+        i {
+          color: var(--muted) !important;
+          font-style: normal;
+          font-weight: 900;
+        }
+      }
+
+      .plus {
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        transition: all ease-in-out .3s;
+
+        &::before {
+          content: "";
+          width: 20rem;
+          height: 2rem;
+          background-color: #fff;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          transition: all ease .3s;
+
+        }
+
+        &::after {
+          content: "";
+          height: 20rem;
+          width: 2rem;
+          background-color: #fff;
+          position: absolute;
+          top: 0%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .a {
+      display: flex;
+      gap: 16px;
+      padding: 0 24px;
+      height: 0;
+      color: var(--muted);
+      font-size: 18px;
+      background-color: #333;
+      border-top: 1px solid #454545;
+      overflow: hidden;
+      transition: all ease-in-out .3s;
+
+      i {
+        color: var(--muted) !important;
+        font-style: normal;
+        font-weight: 900;
+      }
+    }
+
+    &[open] {
+      summary {
+        color: var(--gold);
+
+        .plus {
+          transform: rotate(90deg);
+
+          &::before {
+            transform: rotate(90deg);
+            opacity: 0;
+          }
+        }
+      }
+
+      .a {
+        padding: 16px 24px;
+        height: 105rem;
+        transition: all ease-in-out .3s;
+      }
+    }
+  }
+}
+
+/* ---------- News ---------- */
+.news-list {
+  margin-top: 48rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .news-item {
+    display: flex;
+    gap: 24rem;
+    padding: 22rem 4rem;
+    border-bottom: 1rem solid var(--line);
+    align-items: flex-start;
+
+    time {
+      color: var(--gold);
+      font-size: 16rem;
+      font-weight: 700;
+      flex: none;
+      width: 110rem;
+      padding-top: 2rem
+    }
+
+    .tag2 {
+      flex: none;
+      font-size: 11rem;
+      font-weight: 700;
+      padding: 3rem 10rem;
+      border-radius: 999rem;
+      border: 1rem solid var(--line);
+      color: var(--muted);
+    }
+
+    p {
+      font-size: 18rem;
+      color: var(--txt)
+    }
   }
 }
