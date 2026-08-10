@@ -728,3 +728,42 @@ section.block {
     }
   }
 }
+
+/* ---------- CTA ---------- */
+.cta {
+  margin: 0 auto;
+  max-width: 1180px;
+  display: flex;
+
+  .cta-inner {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 40px;
+    text-align: center;
+    background-color: #fff;
+
+    &>* {
+      position: relative;
+    }
+
+    h2 {
+      font-size: 28rem;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 14rem;
+      color: var(--muted);
+      max-width: 540px;
+      margin: 0 auto 32px;
+    }
+
+    a {
+      color: #fff;
+      font-size: 18rem;
+      font-weight: 600;
+    }
+  }
+}

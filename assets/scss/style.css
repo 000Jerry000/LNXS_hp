@@ -2481,4 +2481,38 @@ section.block {
 .news-list .news-item p {
   font-size: 18rem;
   color: var(--txt);
+}
+
+/* ---------- CTA ---------- */
+.cta {
+  margin: 0 auto;
+  max-width: 1180px;
+  display: flex;
+}
+.cta .cta-inner {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 40px;
+  text-align: center;
+  background-color: #fff;
+}
+.cta .cta-inner > * {
+  position: relative;
+}
+.cta .cta-inner h2 {
+  font-size: 28rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 16px;
+}
+.cta .cta-inner p {
+  font-size: 14rem;
+  color: var(--muted);
+  max-width: 540px;
+  margin: 0 auto 32px;
+}
+.cta .cta-inner a {
+  color: #fff;
+  font-size: 18rem;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
