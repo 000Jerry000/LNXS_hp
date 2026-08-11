@@ -1,179 +1,104 @@
-.footer {
-  &-container {
-    background: #3B353C;
-    padding: 64px 160px;
-    @include pc {
-      padding: 64rem 160rem;
-    }
-    @include sp {
-      padding: 64rem 16rem;
-    }
-  }
-  &-main {
+/* ---------- Footer ---------- */
+footer {
+
+  .footer-links {
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-    margin-bottom: 64px;
-    @include pc {
-      margin-bottom: 64rem;
+    justify-content: center;
+    width: 100%;
+    background-color: #121212;
+    background: var(--bg-2);
+
+    li {
+      position: relative;
+      padding-inline: 15rem;
+      margin-block: 12rem;
+
+      &::after {
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      &:nth-last-child(1) {
+        &::after {
+          height: 0;
+        }
+      }
+
+      a {
+        display: block;
+        color: #fff;
+        font-size: 14px;
+        transition: color .2s;
+        border-bottom: 1px solid #ffffff00;
+      }
     }
-    @include sp {
-      display: block;
+
+
+    a:hover {
+      border-bottom: 1px solid #fff;
     }
-    &__elem {
-      h2 {
-        color: var(--g-color-bg);
-        font-size: 19px;
-        line-height: 1.5;
-        font-weight: 500;
-        margin-bottom: 64px;
-        @include pc {
-          font-size: 19rem;
-          margin-bottom: 64rem;
-        }
+  }
+
+  .footer-bottom {
+    padding-block: 12px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    color: #fff;
+    font-size: 13px;
+    background-color: #121212;
+
+    a {
+      border-bottom: 1px solid #ffffff00;
+      position: relative;
+
+      &:hover {
+        border-bottom: 1px solid #fff;
       }
-      &-detail {
-        ul {
-          li {
-            display: flex;
-            align-items: start;
-            justify-content: left;
-            svg {
-              margin-top: 3px;
-              margin-right: 8px;
-              width: 20px;
-              height: 20px;
-              @include pc {
-                margin-top: 3rem;
-                margin-right: 8rem;
-                width: 20rem;
-                height: 20rem;
-              }
-            }
-            p {
-              color: var(--g-color-bg);
-              font-size: 19px;
-              line-height: 1.5;
-              @include pc {
-                font-size: 19rem;
-              }
-            }
-            &:first-child {
-              svg {
-                width: 24px;
-                height: 24px;
-                @include pc {
-                  width: 24rem;
-                  height: 24rem;
-                }
-              }
-            }
-            &:not(:last-child) {
-              margin-bottom: 16px;
-              @include pc {
-                margin-bottom: 16rem;
-              } 
-            }
-          }
-        }
+
+      &::after {
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: #969696;
+        position: absolute;
+        top: 0;
+        right: -15rem;
       }
-      &-link {
-        ul {
-          li {
-            a {
-              color: var(--g-color-bg);
-              font-weight: 500;
-              font-size: 16px;
-              line-height: 1;
-              @include pc {
-                font-size: 16rem;
-              }
-            }
-          }
-        }
-        & > ul {
-          & > li {
-            &:not(:last-child) {
-              margin-bottom: 24px;
-              @include pc {
-                margin-bottom: 24rem;
-              }
-            }
-            ul {
-              padding-top: 8px;
-              padding-left: 8px;
-              @include pc {
-                padding-top: 8rem;
-                padding-left: 8rem;
-              }
-              li {
-                &:not(:last-child) {
-                  margin-bottom: 16px;
-                  @include pc {
-                    margin-bottom: 16rem;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      &-btn {
-        @include sp {
-          text-align: center;
-        }
-        &:first-child {
-          margin-bottom: 24px;
-          @include pc {
-            margin-bottom: 24rem;
-          }
-          a {
-            &:hover {
-              color: var(--g-color-black);
-              svg {
-                path {
-                  fill: var(--g-color-black);
-                }
-              }
-            }
-          }
-        }
-        &:last-child {
-          a {
-            color: var(--g-color-black);
-            &:hover {
-              color: var(--g-color-bg);
-            }
-          }
-        }
-        a {
-          border: unset;
-          width: 288px;
-          height: 55px;
-          padding: unset;
-          @include pc {
-            width: 288rem;
-            height: 55rem;
-          }
-          @include sp {
-            margin: auto;
-          }
-        }
-      }
-      &:not(:last-child) {
-        @include sp {
-          margin-bottom: 64rem;
+
+      &:nth-last-child(1) {
+        &::after {
+          display: none;
         }
       }
     }
   }
-  &-bottom {
-    p {
-      text-align: center;
-      color: var(--g-color-bg);
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.5;
+
+  .foot-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    padding-bottom: 20rem;
+
+    ul {
+      display: flex;
+      gap: 10rem;
+      margin-block: 20rem;
+
+      li {
+        width: 50rem;
+      }
+    }
+
+    span {
+      font-size: 12rem;
     }
   }
 }
