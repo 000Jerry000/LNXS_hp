@@ -88,6 +88,9 @@ header.header {
       align-items: center;
       font-size: 14rem;
       color: var(--muted);
+      @include sp {
+        display: none;
+      }
 
       a {
         height: 60rem;
@@ -136,7 +139,12 @@ header.header {
       border: none;
       color: var(--txt);
       font-size: 26rem;
-      cursor: pointer
+      cursor: pointer;
+
+      @include sp {
+        display: block;
+        padding: 10rem;
+      }
     }
   }
 }
