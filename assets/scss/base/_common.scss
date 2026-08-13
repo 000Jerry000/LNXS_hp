@@ -528,19 +528,31 @@ section{
 }
 
 .wrap {
-  max-width: 1280rem;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24rem
+  padding: 0 24px;
+  @include pc {
+    max-width: 1280rem;
+    padding: 0 24rem;
+  }
+  @include sp {
+    padding: 0 16rem;
+  }
 }
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 8rem;
-  padding: 22rem 42rem;
-  font-size: 14rem;
+  gap: 8px;
+  padding: 22px 42px;
+  font-size: 14px;
   transition: transform .2s, box-shadow .2s, opacity .2s;
   cursor: pointer;
   border: none;
+  @include pc {
+    gap: 8rem;
+    padding: 22rem 42rem;
+    font-size: 14rem;
+  }
   &-primary {
     color: #12100a;
     background: var(--gold);

@@ -7,11 +7,28 @@ footer {
     width: 100%;
     background-color: #121212;
     background: var(--bg-2);
+    @include sp {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
 
     li {
       position: relative;
-      padding-inline: 15rem;
-      margin-block: 12rem;
+      padding-inline: 15px;
+      margin-block: 12px;
+      list-style: none;
+
+      @include pc {
+        padding-inline: 15rem;
+        margin-block: 12rem;
+      }
+      @include sp {
+        width: 50%;
+        border-right: 1px solid #454545;
+        border-bottom: 1px solid #454545;
+        margin-block: 0;
+        padding-block: 6rem;
+      }
 
       &::after {
         content: "";
@@ -21,6 +38,9 @@ footer {
         position: absolute;
         right: 0;
         top: 0;
+        @include sp {
+          display: none;
+        }
       }
 
       &:nth-last-child(1) {
@@ -35,6 +55,14 @@ footer {
         font-size: 14px;
         transition: color .2s;
         border-bottom: 1px solid #ffffff00;
+
+        @include pc {
+          font-size: 14rem;
+        }
+        @include sp {
+          font-size: 12rem;
+          text-align: center;
+        }
       }
     }
 
@@ -53,6 +81,17 @@ footer {
     color: #fff;
     font-size: 13px;
     background-color: #121212;
+    
+    @include pc {
+      padding-block: 12px;
+      font-size: 13rem;
+      gap: 30rem;
+    }
+    @include sp {
+      padding-block: 12rem;
+      font-size: 12rem;
+      gap: 10rem;
+    }
 
     a {
       border-bottom: 1px solid #ffffff00;
@@ -69,7 +108,13 @@ footer {
         background-color: #969696;
         position: absolute;
         top: 0;
-        right: -15rem;
+        right: -15px;
+        @include pc {
+          right: -15rem;
+        }
+        @include sp {
+          display: none;
+        }
       }
 
       &:nth-last-child(1) {
@@ -85,20 +130,44 @@ footer {
     flex-direction: column;
     align-items: center;
     background-color: #000;
-    padding-bottom: 20rem;
+    padding-bottom: 20px;
+    @include pc {
+      padding-bottom: 20rem;
+    }
 
     ul {
       display: flex;
-      gap: 10rem;
-      margin-block: 20rem;
+      gap: 10px;
+      margin-block: 20px;
+      @include pc {
+        gap: 10rem;
+        margin-block: 20rem;
+      }
+      @include sp {
+        flex-wrap: wrap;
+        gap: 5rem;
+        margin-block: 10rem;
+      }
 
       li {
-        width: 50rem;
+        width: 50px;
+        @include pc {
+          width: 50rem;
+        }
+        @include sp {
+          width: 40rem;
+        }
       }
     }
 
     span {
-      font-size: 12rem;
+      font-size: 12px;
+      @include pc {
+        font-size: 12rem;
+      }
+      @include sp {
+        font-size: 10rem;
+      }
     }
   }
 }
