@@ -1501,6 +1501,11 @@ footer .footer-links li a {
 footer .footer-links a:hover {
   border-bottom: 1px solid #fff;
 }
+@media screen and (max-width: 768px) {
+  footer .footer-links a:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+  }
+}
 footer .footer-bottom {
   padding-block: 12px;
   display: flex;
@@ -1580,7 +1585,6 @@ footer .foot-bottom ul {
 @media screen and (max-width: 768px) {
   footer .foot-bottom ul {
     flex-wrap: wrap;
-    gap: 5rem;
     margin-block: 10rem;
   }
 }
@@ -2437,90 +2441,105 @@ section.block {
   align-items: center;
 }
 .roles .role .tag {
-  font-size: 24px;
+  font-size: 30px;
   letter-spacing: 0.16em;
   color: #fff;
   font-weight: 700;
   width: 100%;
   text-align: center;
-  padding: 50px 0;
+  padding: 10px 0;
 }
 @media screen and (max-width: 1500px) {
   .roles .role .tag {
-    font-size: 24rem;
-    padding: 50rem 0;
+    font-size: 30rem;
+    padding: 10rem 0;
   }
+}
+.roles .role .tag h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+@media screen and (max-width: 1500px) {
+  .roles .role .tag h3 {
+    font-size: 16rem;
+  }
+}
+.roles .role:nth-of-type(1) {
+  border: 1px solid #113051;
 }
 .roles .role:nth-of-type(1) .tag {
-  background-color: #8B8B8B;
+  background-color: #022655;
+}
+.roles .role:nth-of-type(1) ul {
+  background-color: #041325;
+}
+.roles .role:nth-of-type(1) li {
+  color: #2873e9;
+  border-bottom: 1px solid #022655;
+}
+.roles .role:nth-of-type(2) {
+  border: 1px solid #2c2741;
 }
 .roles .role:nth-of-type(2) .tag {
-  background-color: var(--gold);
+  background-color: #2a1950;
 }
-.roles .role:nth-of-type(2) .tag::before {
-  content: "";
-  top: 0;
-  right: 0;
-  border-bottom: 3em solid transparent;
-  border-right: 3em solid #FFC400;
-  position: absolute;
-  z-index: 100;
+.roles .role:nth-of-type(2) ul {
+  background-color: #151027;
 }
-.roles .role:nth-of-type(2) .tag::after {
-  content: "一番人気!";
-  display: block;
-  top: 18px;
-  transform: rotate(45deg);
-  font-size: 10px;
-  color: #000;
-  right: 0;
-  position: absolute;
-  z-index: 101;
+.roles .role:nth-of-type(2) li {
+  color: #9b61de;
+  border-bottom: 1px solid #2c2741;
 }
-@media screen and (max-width: 1500px) {
-  .roles .role:nth-of-type(2) .tag::after {
-    top: 18rem;
-    font-size: 10rem;
-  }
+.roles .role:nth-of-type(3) {
+  border: 1px solid #183b29;
 }
 .roles .role:nth-of-type(3) .tag {
-  background-color: #9F4F48;
+  background-color: #103f25;
 }
-.roles .role h3 {
-  font-size: 20px;
-  font-weight: 500;
-  padding-block: 60px;
+.roles .role:nth-of-type(3) ul {
+  background-color: #071f15;
 }
-@media screen and (max-width: 1500px) {
-  .roles .role h3 {
-    font-size: 20rem;
-    padding-block: 60rem;
-  }
+.roles .role:nth-of-type(3) li {
+  color: #4ecdc4;
+  border-bottom: 1px solid #183b29;
 }
 .roles .role ul {
   width: 100%;
   list-style: none;
   display: flex;
   flex-direction: column;
+  padding-inline: 20px;
 }
 .roles .role ul li {
   width: 100%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 14px;
   position: relative;
-  padding-block: 10px;
 }
 @media screen and (max-width: 1500px) {
   .roles .role ul li {
     font-size: 14rem;
-    padding-block: 10rem;
   }
 }
-.roles .role ul li:nth-of-type(even) {
-  background-color: #454545;
+@media screen and (max-width: 768px) {
+  .roles .role ul li {
+    font-size: 12rem;
+  }
 }
-.roles .role ul li:nth-of-type(odd) {
-  background-color: #333;
+.roles .role ul li:nth-last-child(1) {
+  border-bottom: none;
+}
+.roles .role ul li span {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 15px 20px;
+  font-size: 32px;
+  font-weight: 900;
+}
+.roles .role ul li p {
+  font-size: 16px;
 }
 
 /* ---------- Features ---------- */
