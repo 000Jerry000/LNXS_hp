@@ -608,6 +608,7 @@ section.block {
 
     &:nth-of-type(3) {
       border: 1px solid #183b29;
+
       .tag {
         background-color: #103f25;
       }
@@ -1384,4 +1385,93 @@ section.block {
       }
     }
   }
+}
+
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 500;
+  width: 100px;
+  height: 100px;
+  background-color: var(--bg-2);
+  border-radius: 50%;
+  border: 1px solid #cdcdcd;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 40px;
+  cursor: pointer;
+  @include pc {
+    width: 100rem;
+    height: 100rem;
+    font-size: 18rem;
+    padding-top: 40rem;
+  }
+  @include sp {
+    width: 60rem;
+    height: 60rem;
+    font-size: 12rem;
+    padding-top: 24rem;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 2px;
+    height: 35px;
+    background-color: #fff;
+    transform: translateX(-50%);
+    @include pc {
+      top: 10rem;
+      width: 2rem;
+      height: 35rem;
+    }
+    @include sp {
+      top: 6rem;
+      width: 2rem;
+      height: 25rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      width: 2px;
+      height: 16px;
+      background-color: #fff;
+      transform: rotate(45deg) translateX(-9px);
+      @include pc {
+        top: 10rem;
+        width: 2rem;
+        height: 35rem;
+      }
+      @include sp {
+        top: 6rem;
+        width: 2rem;
+        height: 25rem;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      width: 2px;
+      height: 16px;
+      background-color: #fff;
+      transform: rotate(-45deg) translateX(8px);
+      @include pc {
+        top: 10rem;
+        width: 2rem;
+        height: 35rem;
+      }
+      @include sp {
+        top: 6rem;
+        width: 2rem;
+        height: 25rem;
+      }
+    }
+  }
+
 }
