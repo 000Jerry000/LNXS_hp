@@ -15,7 +15,7 @@
   <!-- ===== Nav ===== -->
   <header class="header">
     <div class="nav">
-      <a class="logo"><span class="mark">L</span>LNXS</a>
+      <a class="logo" href="#"><span class="mark">L</span>LNXS</a>
       <nav class="nav-links">
         <a href="#highlights">特長</a>
         <a href="#roles">役割別</a>
@@ -25,12 +25,33 @@
         <a href="#news">お知らせ</a>
         <a href="#contact" class="btn btn-primary">お問い合わせ</a>
       </nav>
-      <button class="burger" onclick="document.getElementById('m').classList.toggle('open')">☰</button>
+      <button type="button" class="nav-menu js-header-menu" id="toggle-btn" aria-label="メニューを開く" aria-expanded="false">
+        <span class="nav-menu__bar"></span>
+        <span class="nav-menu__bar"></span>
+        <span class="nav-menu__bar"></span>
+      </button>
     </div>
+    <nav class="sp-menu js-sp-menu">
+      <img src="./assets/img/top/footer_logo.webp" class="sp-menu-logo" alt="">
+      <nav class="sp-menu__list">
+        <ul>
+
+          <li><a href="#">TOP</a></li>
+          <li><a href="#">会社紹介</a></li>
+          <li><a href="./page-gomibook.html">ごみと資源ずかん</a></li>
+          <li><a href="./page-workbook.html">おしごとずかん</a></li>
+          <li><a href="./page-recruit.html">採用情報</a></li>
+          <li><a href="./page-blog.html">お知らせ</a></li>
+
+        </ul>
+      </nav>
+      <img src="./assets/img/top/menu-img.webp" class="sp-menu-img" alt="">
+    </nav>
+
+    <div class="full-bg"></div>
   </header>
 
-  <main>
-    <!-- <button class="to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">TOP</button> -->
+  <main class="main">
 
     <!-- ===== Hero ===== -->
     <section class="sec-hero">

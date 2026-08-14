@@ -1430,46 +1430,46 @@ section.block {
     @include sp {
       top: 6rem;
       width: 2rem;
-      height: 25rem;
+      height: 22rem;
     }
     &::before {
       content: "";
       position: absolute;
       top: 5px;
-      left: 50%;
-      width: 2px;
-      height: 16px;
+      right: 0;
+      width: 15px;
+      height: 2px;
       background-color: #fff;
-      transform: rotate(45deg) translateX(-9px);
+      transform: rotate(-45deg) translateX(2px);
       @include pc {
-        top: 10rem;
-        width: 2rem;
-        height: 35rem;
+        top: 5rem;
+        width: 15rem;
+        height: 2rem;
       }
       @include sp {
-        top: 6rem;
-        width: 2rem;
-        height: 25rem;
+        top: 3rem;
+        width: 12rem;
+        height: 2rem;
       }
     }
     &::after {
       content: "";
       position: absolute;
       top: 5px;
-      left: 50%;
-      width: 2px;
-      height: 16px;
+      left: 0;
+      width: 15px;
+      height: 2px;
       background-color: #fff;
-      transform: rotate(-45deg) translateX(8px);
+      transform: rotate(45deg) translateX(-2px);
       @include pc {
-        top: 10rem;
-        width: 2rem;
-        height: 35rem;
+        top: 5rem;
+        width: 15rem;
+        height: 2rem;
       }
       @include sp {
-        top: 6rem;
-        width: 2rem;
-        height: 25rem;
+        top: 3rem;
+        width: 12rem;
+        height: 2rem;
       }
     }
   }

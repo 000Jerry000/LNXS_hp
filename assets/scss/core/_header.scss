@@ -49,6 +49,9 @@
   letter-spacing: .14em;
   font-size: 20rem;
   padding-left: 10rem;
+  @include sp {
+    padding-left: 0;
+  }
 
   .mark {
     width: 34rem;
@@ -73,6 +76,10 @@ header.header {
   background-color: #000000d3;
   z-index: 999;
 
+  @include sp {
+    padding: 10rem;
+  }
+
   .nav {
     width: 100%;
     display: flex;
@@ -83,11 +90,12 @@ header.header {
       padding: 10rem 20rem;
     }
 
-    .nav-links {
+    &-links {
       display: flex;
       align-items: center;
       font-size: 14rem;
       color: var(--muted);
+
       @include sp {
         display: none;
       }
@@ -133,17 +141,208 @@ header.header {
       }
     }
 
-    .burger {
+    // --- ハンバーガーメニュー（右・円形） ------------------------------------
+    &-menu {
+      justify-self: end;
       display: none;
-      background: none;
-      border: none;
-      color: var(--txt);
-      font-size: 26rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      width: 56px;
+      height: 56px;
+      padding: 0;
+      appearance: none;
+      -webkit-appearance: none;
+      background-color: #454545;
+      border: 1px solid #cdcdcd;
+      border-radius: 50%;
       cursor: pointer;
+      transition: opacity 0.25s ease;
+      transition: all ease-in-out .2s;
+      position: relative;
+      z-index: 999;
+
+      @include pc {
+        gap: 5rem;
+        width: 56rem;
+        height: 56rem;
+      }
 
       @include sp {
+        display: flex;
+        width: 39rem;
+        height: 39rem;
+        gap: 3rem;
+      }
+
+      &:hover {
+        border: 1px solid var(--gold);
+        background-color: #fff;
+        transition: all ease-in-out .2s;
+
+        .nav-menu__bar {
+          background-color: var(--gold);
+        }
+      }
+
+      &__bar {
         display: block;
-        padding: 10rem;
+        width: 22px;
+        height: 2px;
+        background-color: var(--g-color-white);
+        border-radius: 1px;
+        transition:
+          transform 0.3s ease,
+          opacity 0.3s ease;
+
+        @include pc {
+          width: 22rem;
+          height: 2rem;
+        }
+
+        @include sp {
+          width: 15rem;
+          height: 1.5rem;
+        }
+      }
+
+      // 開いた状態 — バーを「×」形にアニメーション（ドロワーメニュー用）
+      &.is-open {
+        .nav-menu__bar {
+          &:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+
+            @include pc {
+              transform: translateY(7rem) rotate(45deg);
+            }
+
+            @include sp {
+              transform: translateY(4rem) rotate(45deg);
+            }
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+
+            @include pc {
+              transform: translateY(-7rem) rotate(-45deg);
+            }
+
+            @include sp {
+              transform: translateY(-5rem) rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* スマホメニュー */
+  .sp-menu {
+    position: fixed;
+    // right: -100%; 32rem 48rem
+    top: 32rem;
+    right: 48rem;
+    transform: translate(50%, -50%);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: #fff;
+    transition: right .4s ease;
+    z-index: 990;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    // display: none;
+    transition: all ease-in-out .3s;
+
+    /* メニュー表示 */
+    &.is-open {
+      // right: 0;
+      transition: all ease-in-out .3s;
+      max-width: 1900rem;
+      width: 1400rem;
+      height: 1400rem;
+      transform: translate(40%, -40%);
+      opacity: 1;
+      display: block;
+
+      @include sp {
+        width: 700rem;
+        height: 700rem;
+      }
+
+      .sp-menu__list {
+        display: block;
+      }
+    }
+
+    &-logo {
+      width: 300rem;
+      position: absolute;
+      top: 41%;
+      left: 20%;
+
+      @include sp {
+        width: 170rem;
+        top: 40%;
+        left: 26%;
+      }
+    }
+
+    /* メニュー一覧 */
+    &__list {
+      display: none;
+      list-style: none;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 15%;
+
+      @include sp {
+        top: 45%;
+        left: 30%;
+      }
+
+      li {
+        margin-bottom: 20rem;
+
+        @include sp {
+          margin-bottom: 10rem;
+        }
+
+        a {
+          font-size: 30rem;
+          color: #000;
+          text-decoration: none;
+          transition: all ease-in-out .2s;
+
+          @include sp {
+            font-size: 16rem;
+          }
+
+          &:hover {
+            color: var(--gold);
+            transition: all ease-in-out .2s;
+          }
+        }
+      }
+    }
+
+    &-img {
+      position: absolute;
+      width: 400rem;
+      bottom: 5%;
+      left: 30%;
+
+      @include sp {
+        width: 200rem;
       }
     }
   }
@@ -151,7 +350,7 @@ header.header {
 
 .full-bg {
   position: fixed;
-  background: rgba($color: #000000, $alpha: 0.5);
+  background: rgba($color: #856D51, $alpha: 0.5);
   width: 100%;
   height: 100%;
   top: 0;
