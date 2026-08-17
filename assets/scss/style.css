@@ -3618,6 +3618,40 @@ section .sitemap ul li:last-child a::after {
   content: "";
 }
 
+.sec-contact-low.block {
+  padding-block: 80px;
+}
+.sec-contact-low.block .low-cta-inner {
+  text-align: center;
+}
+.sec-contact-low.block .low-cta-inner h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact-low.block .low-cta-inner h2 {
+    font-size: 18rem;
+  }
+}
+.sec-contact-low.block .low-cta-inner p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.sec-contact-low.block .low-cta-inner a {
+  color: #fff;
+  padding: 20px 134px;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact-low.block .low-cta-inner a {
+    padding: 16px 64px;
+    font-size: 18px;
+  }
+}
+
 .sec-contact {
   padding-top: 250rem;
   padding-bottom: 100rem;
@@ -3889,6 +3923,10 @@ section .sitemap ul li:last-child a::after {
   display: block;
   font-weight: bold;
 }
+.sec-contact__main .contact-form label span {
+  margin-left: 10rem;
+  color: red;
+}
 .sec-contact__main .contact-form input {
   width: 100%;
   height: 64rem;
@@ -3991,6 +4029,7 @@ section .sitemap ul li:last-child a::after {
 .sec-contact__main .contact-form .contact-check .text {
   font-size: 16px;
   line-height: 1.5;
+  color: #000;
 }
 .sec-contact__main .contact-form .contact-submit {
   display: flex;

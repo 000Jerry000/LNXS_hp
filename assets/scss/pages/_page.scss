@@ -56,3 +56,40 @@ section {
   }
 }
 
+.sec-contact-low.block {
+  padding-block: 80px;
+
+  .low-cta {
+    &-inner {
+      text-align: center;
+
+      h2 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        @include sp {
+          font-size: 18rem;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+
+      a {
+        color: #fff;
+        padding: 20px 134px;
+        font-size: 22px;
+        font-weight: 500;
+        font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+
+        @include sp {
+          padding: 16px 64px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
