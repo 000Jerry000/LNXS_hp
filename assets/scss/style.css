@@ -42,6 +42,7 @@
   --muted: #9a9ab0;
   --gold: #856D51;
   --gold-2: #504231;
+  --gold-3: #f1cb77;
   --gold-text: #e8c870;
   --purple: #7c5cff;
   --purple-2: #b28bff;
@@ -3568,4 +3569,456 @@ section.block {
     width: 12rem;
     height: 2rem;
   }
+}
+
+section.banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url("../img/town.png") center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.banner .banner-inner {
+  text-align: center;
+}
+section.banner .banner-inner .banner-title {
+  font-size: 46rem;
+  font-weight: bold;
+  margin-bottom: 20rem;
+}
+section.banner .banner-inner .banner-sub {
+  font-size: 18rem;
+  color: #666;
+}
+
+section {
+  padding-top: 30px;
+}
+section .sitemap {
+  margin: 30rem 50rem;
+}
+section .sitemap ul {
+  display: inline-flex;
+  gap: 10rem;
+  font-size: 14rem;
+}
+section .sitemap ul li a {
+  text-decoration: none;
+}
+section .sitemap ul li a:hover {
+  text-decoration: underline;
+}
+section .sitemap ul li a::after {
+  content: "/";
+  margin-left: 5rem;
+}
+section .sitemap ul li:last-child a::after {
+  content: "";
+}
+
+.sec-contact {
+  padding-top: 250rem;
+  padding-bottom: 100rem;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact {
+    padding-top: 110rem;
+    padding-bottom: 30rem;
+  }
+}
+.sec-contact__inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1500px) {
+  .sec-contact__inner {
+    width: 1300rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__inner {
+    width: 335rem;
+  }
+}
+.sec-contact__heading {
+  flex: 0 0 45%;
+}
+.sec-contact__title {
+  font-size: 110rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--gold);
+  -webkit-text-stroke: 2rem #333;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__title {
+    font-size: 50rem;
+    -webkit-text-stroke: 1rem #333;
+  }
+}
+.sec-contact__sub {
+  margin-top: 18rem;
+  font-size: 36rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__sub {
+    font-size: 16rem;
+    margin-top: 8rem;
+  }
+}
+.sec-contact__image {
+  position: absolute;
+  top: 100rem;
+  right: 200rem;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__image {
+    position: unset;
+    transform: translateX(20rem);
+    margin-block: 20rem;
+  }
+}
+.sec-contact__image img {
+  display: block;
+  width: 100%;
+  max-width: 500rem;
+  height: auto;
+  margin-left: auto;
+}
+.sec-contact .tel-btn {
+  border: 3px solid var(--gold);
+  background-color: var(--gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50rem;
+  padding-block: 30rem;
+  transition: all ease-in-out 0.2s;
+}
+.sec-contact .tel-btn:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.sec-contact .tel-btn:hover h4 {
+  color: var(--gold-3);
+}
+.sec-contact .tel-btn:hover .white {
+  display: none;
+}
+.sec-contact .tel-btn:hover .yellow {
+  display: block;
+}
+.sec-contact .tel-btn:hover strong {
+  color: var(--gold-3);
+}
+.sec-contact .tel-btn:hover small {
+  color: var(--gold-3);
+}
+.sec-contact .tel-btn h4 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 32rem;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact .tel-btn h4 {
+    font-size: 14rem;
+    width: 100%;
+  }
+}
+.sec-contact .tel-btn div {
+  display: flex;
+  align-items: center;
+  gap: 20rem;
+}
+.sec-contact .tel-btn div span img {
+  width: 55rem;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact .tel-btn div span img {
+    width: 25rem;
+  }
+}
+.sec-contact .tel-btn div span img.yellow {
+  display: none;
+}
+.sec-contact .tel-btn div span img.white {
+  display: block;
+}
+.sec-contact .tel-btn div strong {
+  font-size: 76rem;
+  line-height: 1em;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact .tel-btn div strong {
+    font-size: 26rem;
+  }
+}
+.sec-contact .tel-btn small {
+  font-size: 14rem;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact .tel-btn small {
+    width: 100%;
+    text-align: center;
+  }
+}
+.sec-contact__main {
+  max-width: 1300px;
+  margin: auto;
+  border: 2rem solid var(--gold);
+  border-radius: 70rem;
+  padding: 80rem 90rem;
+  background: #fff;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__main {
+    padding: 40rem 15rem;
+    margin-inline: 20rem;
+    border-radius: 30rem;
+  }
+}
+.sec-contact__main span, .sec-contact__main label {
+  color: #000;
+}
+.sec-contact__main__title {
+  font-size: 30rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--gold);
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__main__title {
+    font-size: 16rem;
+    -webkit-text-stroke: 0rem #333;
+  }
+}
+.sec-contact__main .contact-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100rem 0 90rem;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__main .contact-step {
+    margin: 50rem 0 40rem;
+  }
+}
+.sec-contact__main .contact-step__item {
+  text-align: center;
+  position: relative;
+}
+.sec-contact__main .contact-step__number {
+  display: block;
+  font-size: 42rem;
+  font-weight: bold;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__main .contact-step__number {
+    top: -80%;
+    font-size: 18rem;
+  }
+}
+.sec-contact__main .contact-step__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140rem;
+  height: 77rem;
+  border-radius: 999rem;
+  border: 1rem solid #333;
+  font-size: 20rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__main .contact-step__label {
+    width: 80rem;
+    height: 44rem;
+    font-size: 12rem;
+    font-weight: bold;
+  }
+}
+.sec-contact__main .contact-step__line {
+  width: 80rem;
+  border-top: 2rem dashed #999;
+}
+.sec-contact__main .contact-step .is-active .contact-step__number {
+  color: var(--gold);
+}
+.sec-contact__main .contact-step .is-active .contact-step__label {
+  background: var(--gold);
+  color: #fff;
+}
+.sec-contact__main .contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30rem;
+  margin-bottom: 30rem;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__main .contact-form__row {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    margin-bottom: 0rem;
+  }
+}
+.sec-contact__main .contact-form__item {
+  margin-bottom: 30rem;
+  font-size: 18rem;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__main .contact-form__item {
+    font-size: 12rem;
+    margin-bottom: 20rem;
+  }
+}
+.sec-contact__main .contact-form label {
+  display: block;
+  font-weight: bold;
+}
+.sec-contact__main .contact-form input {
+  width: 100%;
+  height: 64rem;
+  padding: 0 20rem;
+  border: 1rem solid #444;
+  border-radius: 10rem;
+  font-size: 18rem;
+  background-color: #fbf9f4;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__main .contact-form input {
+    height: 38rem;
+    margin-top: 10rem;
+    font-size: 12.5rem;
+  }
+}
+.sec-contact__main .contact-form textarea {
+  width: 100%;
+  height: 240rem;
+  padding: 20rem;
+  border: 1rem solid #444;
+  border-radius: 10rem;
+  resize: vertical;
+  background-color: #fbf9f4;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__main .contact-form textarea {
+    margin-top: 10rem;
+    height: 150rem;
+  }
+}
+.sec-contact__main .contact-form .contact-privacy {
+  border: 1rem solid #444;
+  border-radius: 10rem;
+  padding: 50rem;
+  margin-bottom: 30rem;
+  font-size: 18rem;
+  color: #000;
+  background-color: #fbf9f4;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__main .contact-form .contact-privacy {
+    padding: 20rem;
+    font-size: 12rem;
+  }
+}
+.sec-contact__main .contact-form .contact-privacy__body {
+  height: 180rem;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  line-height: 2;
+  padding-right: 20rem;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__main .contact-form .contact-privacy__body {
+    height: 130rem;
+  }
+}
+.sec-contact__main .contact-form .contact-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.sec-contact__main .contact-form .contact-check input {
+  display: none;
+}
+.sec-contact__main .contact-form .contact-check .checkmark {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #bdbdbd;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+.sec-contact__main .contact-form .contact-check .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid #6cc04a;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.sec-contact__main .contact-form .contact-check input:checked + .checkmark {
+  border-color: #6cc04a;
+}
+.sec-contact__main .contact-form .contact-check input:checked + .checkmark::after {
+  opacity: 1;
+}
+.sec-contact__main .contact-form .contact-check .text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.sec-contact__main .contact-form .contact-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220rem;
+  height: 70rem;
+  margin: auto;
+  margin-top: 50rem;
+  border: none;
+  border: 1px solid #444;
+  border-radius: 999rem;
+  background: var(--gold);
+  color: #fff;
+  font-size: 18rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .sec-contact__main .contact-form .contact-submit {
+    font-size: 16rem;
+    width: 220rem;
+    height: 45rem;
+    margin-top: 30rem;
+  }
+}
+.sec-contact__main .contact-form .contact-submit:hover {
+  background: #fff;
+  color: var(--gold);
 }/*# sourceMappingURL=style.css.map */
